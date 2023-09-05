@@ -12,7 +12,7 @@ def calcular_modulo_vector(origen, fin):
     componente_z = diferencia_z
 
     # Calcular el módulo del vector
-    modulo = math.sqrt(diferencia_x*2 + diferencia_y2 + diferencia_z*2)
+    modulo = math.sqrt(diferencia_x*2 + diferencia_y*2 + diferencia_z*2)
 
     return modulo, (componente_x, componente_y, componente_z)
 
