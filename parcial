@@ -1,0 +1,49 @@
+import random as r
+
+def main():
+    print('Bienvenido a BLACKJACK')
+    print('¡Que comience el juego!')
+    cartas()
+    
+def cartas():
+    baraja='A23456789QJK'
+    for i in range(1):
+        cartas=[]
+        cartas.append(r.choice(baraja))
+        cartas.append(r.choice(baraja))
+        print(cartas)
+        conteo(cartas)
+        opc='y'
+
+    while opc=='y':
+        opc=input('Quiere otra carta? (y/n)')
+        if opc=='y':
+            cartas.append(r.choice(baraja))
+            print(cartas)
+            conteo(cartas)
+        elif opc=='n':
+            break
+        else:
+            print('opcion invalida')
+            opc='y'
+
+def valor(c):
+    jack=['J','Q','K']
+    if c in jack:
+        c=10
+    elif c =='A':
+        c=11
+    else:
+        c=int(c)
+    return c
+
+def conteo(cartas):
+    valor_cartas=[]
+    for i in range(len((cartas))):
+        valor_cartas.append(valor(cartas[i]))
+    print(valor_cartas)
+    conteo=sum(valor_cartas)
+    print('conteo:',conteo)
+
+if __name__=="__main__":
+    main()
