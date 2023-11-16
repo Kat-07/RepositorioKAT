@@ -1,0 +1,4 @@
+        # print('Productos disponibles:')
+        # for i in len(item.getProducto()):
+        #     for producto in item.getProducto():
+        #         print('i.', producto.getNombre())  
